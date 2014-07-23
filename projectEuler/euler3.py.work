@@ -1,0 +1,13 @@
+#What is the largest prime factor of the number 600851475143 ?
+x = 600851475143
+prime = False
+for y in xrange(600851475142, 0, -1):
+	if(x%y == 0):
+		print(y)
+		prime = True
+		for z in xrange(y-1, 0, -1):
+			if(y%z == 0):
+				prime = False
+		if(prime):
+			print(y)
+			exit()
